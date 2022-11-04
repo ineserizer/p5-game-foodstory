@@ -30,12 +30,12 @@ function setup() {
 	gameTune.play()
 
 
-	if (frameCount % 10 === 0) counter--;
+	if (frameCount % 5 === 0) counter--;
 
 	if (counter <1) {
 		textSize(48);
 		noLoop()
-		text (game.player.score, location.href = 'index3.html')
+		text (game.player.score, location.replace ('index3.html?score=' + game.player.score)  )
 	}
 	
 	textSize(32);

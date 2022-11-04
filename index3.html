@@ -6,29 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/rexlia" rel="stylesheet"/> 
     <link rel="stylesheet" href="style.css" />
-    <script>
-    document.addEventListener("keyup", event => {
-      window.open ("./index2.html", "_self")  } )
-    </script>
+
     <title>Berlin food story</title>
 </head>
 <body background="./assets/welcome.png">
-    <h1 class="subtitle" id="score"><span >X</span> DÖNER COLLECTED</h1>  
+    <h1 class="subtitle" id="score"><span id="score-text">Many</span> DÖNER COLLECTED</h1>  
     <br>
         <h1 class="title" style="margin-top:20px">Press space to play again</h1>
       </br>
-      <script src="finalScore.js"></script>
-      <script src="main.js"></script>
-
-
+     
 </body>
  
 <prompt>
     <div class = "successDog"> <img src="/BerlinFoodStory/assets/success.png" alt="Trevors">
     <div class="successPrompt">Hooray! Trevor ate X Döner Kebap! <br> 
-        What a blast it was to experience this Berlin food </br> 
-        <br>story with you! Play again!  </br></div>
+        What a blast it was to experience this Berlin food story with you! </br> 
+        <br> Press space to play again!  </br></div>
     </div>
 </prompt>
+<script>
+    document.addEventListener("keyup", event => {
+      window.open ("./index2.html", "_self")  } )
 
+    
+//Get the current link
+    const urlSearchParams = new URL(window.location).searchParams;
+    const params = urlSearchParams.get('score')    
+    const scoreText = document.getElementById('score-text')
+    scoreText.innerText = params
+
+    </script>
 </html>
