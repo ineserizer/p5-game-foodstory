@@ -30,7 +30,7 @@ function setup() {
 	gameTune.play()
 
 
-	if (frameCount % 5 === 0) counter--;
+	if (frameCount % 60 === 0) counter--;
 
 	if (counter <1) {
 		textSize(48);
